@@ -1,0 +1,2 @@
+This is the first file in binary mode.
+It contains some text in binary format.
