@@ -5,7 +5,7 @@ import humanize
 print(humanize.intword(123456789))  # Output: '123 million
 print(humanize.intcomma(123456789))
 print(humanize.ordinal(23))  # Output: '23rd'
-print(humanize.apnumber(8))
+print(humanize.apnumber(0))  # works for 0-9
 print(humanize.fractional(0.5))
 
 file_size = 123456789
@@ -28,8 +28,8 @@ print(humanize.naturaldate(some_date))
 
 today = datetime.now()
 tomorrow = today + timedelta(days=1)
-print(humanize.naturalday(today))
-print(humanize.naturalday(tomorrow))
+print(humanize.naturalday(today))  # works only for yesterday, today and tomorrow
+print(humanize.naturalday(tomorrow))  # works only for yesterday, today and tomorrow
 
 duration = timedelta(days=2, hours=3, minutes=30)
 print(humanize.precisedelta(duration))
